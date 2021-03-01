@@ -4,7 +4,7 @@ let DATA = {
     {
       id: 1,
       name: "Python",
-      photo: "https://picsum.photos/200/200",
+      photo: "https://picsum.photos/id/1/300",
       lastUpdate: "rtreter",
       bio: "464545",
       phone: 99895453226,
@@ -22,7 +22,7 @@ let DATA = {
     {
       id: 2,
       name: "Farhod",
-      photo: "https://picsum.photos/2/10",
+      photo: "https://picsum.photos/id/22/300",
       lastUpdate: "rtreter",
       bio: "4444",
       phone: 99895453226,
@@ -40,7 +40,7 @@ let DATA = {
     {
       id: 3,
       name: "Sama",
-      photo: "https://picsum.photos/89/200",
+      photo: "https://picsum.photos/id/33/300",
       lastUpdate: "rtreter",
       bio: "55555",
       phone: 99895453226,
@@ -58,7 +58,7 @@ let DATA = {
     {
       id: 4,
       name: "Ula",
-      photo: "https://picsum.photos/85/200",
+      photo: "https://picsum.photos/id/44/300",
       lastUpdate: "rtreter",
       bio: "6666666",
       phone: 99895453226,
@@ -76,7 +76,7 @@ let DATA = {
     {
       id: 5,
       name: "Ulug",
-      photo: "https://picsum.photos/200/70",
+      photo: "https://picsum.photos/id/55/300",
       lastUpdate: "rtreter",
       bio: "777777",
       phone: 99895453226,
@@ -94,7 +94,7 @@ let DATA = {
     {
       id: 6,
       name: "Mike",
-      photo: "https://picsum.photos/100/200",
+      photo: "https://picsum.photos/id/66/300",
       lastUpdate: "rtreter",
       bio: "8888888",
       phone: 99895453226,
@@ -112,7 +112,7 @@ let DATA = {
     {
       id: 7,
       name: "Malika",
-      photo: "https://picsum.photos/55/200",
+      photo: "https://picsum.photos/id/7/300",
       lastUpdate: "rtreter",
       bio: "999999",
       phone: 99895453226,
@@ -130,7 +130,7 @@ let DATA = {
     {
       id: 8,
       name: "Floyd",
-      photo: "https://picsum.photos/25/200",
+      photo: "https://picsum.photos/id/88/300",
       lastUpdate: "rtreter",
       bio: "0000000",
       phone: 99895453226,
@@ -148,7 +148,7 @@ let DATA = {
     {
       id: 9,
       name: "MAyweather",
-      photo: "https://picsum.photos/27/200",
+      photo: "https://picsum.photos/id/9/300",
       lastUpdate: "rtreter",
       bio: "754865gh",
       phone: 99895453226,
@@ -166,7 +166,7 @@ let DATA = {
     {
       id: 10,
       name: "Lukman",
-      photo: "https://picsum.photos/14/200",
+      photo: "https://picsum.photos/id/10/300",
       lastUpdate: "rtreter",
       bio: "@daer",
       phone: 99895453226,
@@ -184,7 +184,7 @@ let DATA = {
     {
       id: 11,
       name: "Ruslan",
-      photo: "https://picsum.photos/8/200",
+      photo: "https://picsum.photos/id/11/300",
       lastUpdate: "rtreter",
       bio: "looke",
       phone: 99895453226,
@@ -202,7 +202,7 @@ let DATA = {
     {
       id: 12,
       name: "Rashid",
-      photo: "https://picsum.photos/5/200",
+      photo: "https://picsum.photos/id/12/300",
       lastUpdate: "rtreter",
       bio: "fff555",
       phone: 99895453226,
@@ -220,7 +220,7 @@ let DATA = {
     {
       id: 13,
       name: "Umid",
-      photo: "https://picsum.photos/78/200",
+      photo: "https://picsum.photos/id/13/300",
       lastUpdate: "rtreter",
       bio: "77ffd",
       phone: 99895453226,
@@ -238,7 +238,7 @@ let DATA = {
     {
       id: 14,
       name: "Anvar",
-      photo: "https://picsum.photos/56/200",
+      photo: "https://picsum.photos/id/14/300",
       lastUpdate: "rtreter",
       bio: "gfrtf987",
       phone: 99895453226,
@@ -258,12 +258,13 @@ let DATA = {
 
 let titleButtonElement = document.querySelector(".title-button");
 let messageFormElement = document.querySelector(".message-form");
+let sendButton = document.querySelector('.send-button')
 let textArea = document.querySelector(".message-textarea");
 let chatListElement = document.querySelector(".chat-list");
 let messagesList = document.querySelector(".messages-list");
 let contactName = document.querySelector(".chat-name");
 
-messageFormElement.addEventListener('click', event => {
+sendButton.addEventListener('click', event => {
   event.preventDefault();
   let newLiElement = document.createElement("li");
   newLiElement.classList.add("message-item");
@@ -285,7 +286,7 @@ messageFormElement.addEventListener('click', event => {
 textArea.addEventListener('keyup', event => {
   event.preventDefault()
   if (event.keyCode == 13) {
-    messageFormElement.click()
+    sendButton.click()
   }
 })
   
